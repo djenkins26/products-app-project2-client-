@@ -15,21 +15,26 @@
 
     <body>
       <h1>Welcome!</h1>
+  <p id="message"></p>
+
+    <h2>To start uploading your products and posting reviews on other products please sign in!
+    Don't have an account? Please sign up!</h2>
 
       <section>
         <form id="sign-up-form">
           <fieldset>
-            <legend>Sign up!</legend>
+            <legend>Sign up</legend>
             <label for"sign-up-email">Email:</label>
-            <input id="sign-up-email" type="email" name="credentials[email]" placeholder="Email>"
+            <input id="sign-up-email" type="email" name="credentials[email]" placeholder="Email"/>
 
             <label for"sign-up-password">Password:</label>
-            <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password">
+            <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password"/>
 
             <label for="sign-up-password-confirmation">Password Confirmation:</label>
-            <input id="sign-up-password-confirmation" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+            <input id="sign-up-password-confirmation" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password"/>
 
-            <input type="submit" value="Sign up!"
+            <input type="submit" value="Sign up!"/>
+
           </fieldset>
         </form>
       </section>
@@ -37,13 +42,13 @@
       <section>
         <form id="sign-in-form">
           <fieldset>
-            <legend>Sign in to play!</legend>
+            <legend>Sign in</legend>
             <label for="sign-in-email">Email:</label>
-            <input id="sign-in-email" type="email" name="credentials[email]" placeholder="Email">
+            <input id="sign-in-email" type="email" name="credentials[email]" placeholder="Email"/>
 
             <label for="sign-in-password">Password:</label>
-            <input id="sign-in-password" type="password" name="credentials[password]" placeholder="Password">
-            <input type="submit" value="Sign in!">
+            <input id="sign-in-password" type="password" name="credentials[password]" placeholder="Password"/>
+            <input type="submit" value="Sign in!"/>
           </fieldset>
         </form>
       </section>
@@ -52,21 +57,71 @@
         <form id="change-password-form">
           <fieldset>
             <legend>Change password</legend>
-            <input type="password" name="passwords[old]" placeholder="Old Password">
-            <input type="password" name="passwords[new]" placeholder="New Password">
+            <input type="password" name="passwords[old]" placeholder="Old Password"/>
+            <input type="password" name="passwords[new]" placeholder="New Password"/>
 
-            <input type="submit" value="Change Password">
+            <input type="submit" value="Change Password"/>
           </fieldset>
         </form>
       </section>
 
       <section>
-        <form id="sign-out">
+        <form id="sign-out-form">
           <fieldset>
             <label for="sign-out"></label>
-            <input type="submit" value="Sign-Out!">
+            <input type="submit" value="Sign-Out!"/>
           </fieldset>
         </form>
       </section>
+
+
+      <section>
+        <form id="create-product">
+        <fieldset>
+          <legend>Create New Product</legend>
+
+          <input name="product[name]" type="text" placeholder="Product name"/>
+
+          <input name="product[text]" type="text" placeholder="Product description"/>
+
+            <button type='submit'>Create</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <section>
+          <button id="index-product">See all Products</button>
+          <div id="product-display"></div>
+        </form>
+      </section>
+
+      <section>
+        <form id="update-product">
+          <fieldset>
+            <legend>Update a Product</legend>
+          <input require type="number" name="product[id]" id="update-product-id" placeholder="Product ID Here"/>
+
+          <input name="product[name]" type="text" placeholder="Update name"/>
+
+          <input name="product[text]" type="text" placeholder="Update description"/>
+
+          <button type="submit">Update</button>
+        </fieldset>
+        </form>
+        <div id="update-product-message" class="user-feedback"></div>
+      </section>
+
+      <section>
+        <form id="delete-product">
+          <fieldset>
+            <legend>Delete Product</legend>
+          <input require type="number" name="product[id]" placeholder="Product ID Here"/>
+          <button type="submit">Delete</button>
+        </fieldset>
+        </form>
+        <div id="delete-product-message" class="user-feedback"></div>
+      </section>
+
+
     </body>
 </html>

@@ -1,1 +1,47 @@
 @import '~bootstrap/scss/bootstrap';
+
+h1 {
+  text-align: center;
+  background-color: lightgrey;
+  color: red;
+}
+
+h2 {
+  text-align: center;
+  color: red;
+  font-family: Didot, serif;
+}
+
+#sign-up-form {
+  background-color: lightgrey;
+}
+
+#sign-in-form {
+  background-color: lightgrey;
+}
+
+#change-password-form {
+  background-color: lightgrey;
+  color: red;
+}
+
+#create-product {
+  background-color: lightgrey;
+  color: red;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+#update-product {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: red;
+}
+
+#delete-product {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: lightgrey;
+  color: red;
+}

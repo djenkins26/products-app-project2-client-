@@ -1,5 +1,7 @@
-curl "https://git.heroku.com/whispering-atoll-59297.git
-" \
+API="http://localhost:7165"
+URL_PATH="/change-password"
+
+curl "${API}${URL_PATH}/" \
   --include \
   --request PATCH \
   --header "Authorization: Bearer ${TOKEN}" \

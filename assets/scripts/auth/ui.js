@@ -3,7 +3,7 @@
 const store = require('./../store')
 
 const signUpSuccess = function (response) {
-  $('#message').text('You are now signed up')
+  $('#message').text('You are now signed up ' + response.user.email)
   $('#sign-up-form').trigger('reset')
 }
 
@@ -12,29 +12,52 @@ const signUpFailure = function (error) {
 }
 
 const signInSuccess = function (response) {
-  $('#message').text('You are now signed in')
+  $('#message').text('You are now signed in ' + response.user.email)
+  $('#sign-in-form').trigger('reset')
 
   store.user = response.user
+  $('#change-password-form').show()
+  $('#sign-out-form').show()
+  $('#sign-up-form').hide()
+  $('#sign-in-form').hide()
+  $('#create-product').show()
+  $('#index-product').show()
+  $('#update-product').show()
+  $('#delete-product').show()
+  $('h1').hide()
+  $('h2').hide()
 }
 
 const signInFailure = function (error) {
   $('#message').text('Sign in failed, try again')
 }
 
-const onChangePasswordSuccess = function () {
+const changePasswordSuccess = function () {
   $('#message').text('Change password successfully')
+  $('#change-password-form').trigger('reset')
 }
 
-const onChangePasswordFailure = function () {
+const changePasswordFailure = function () {
   $('#message').text('Changed password failed, try again')
 }
 
-const onSignOutSuccess = function () {
-  $('#message').text('Signed out successfully')
+const signOutSuccess = function () {
+  $('#message').text('You are now signed out')
   store.user = null
+  $('#change-password-form').hide()
+  $('#sign-out-form').hide()
+  $('#sign-up-form').show()
+  $('#sign-in-form').show()
+  $('#create-product').hide()
+  $('#index-product').hide()
+  $('#product-display').hide()
+  $('#update-product').hide()
+  $('#delete-product').hide()
+  $('h1').show()
+  $('h2').show()
 }
 
-const onSignOutFailure = function () {
+const signOutFailure = function () {
   $('#message').text('Sign out failed')
 }
 
@@ -43,9 +66,9 @@ module.exports = {
   signUpFailure,
   signInSuccess,
   signInFailure,
-  onChangePasswordSuccess,
-  onChangePasswordFailure,
-  onSignOutSuccess,
-  onSignOutFailure
+  changePasswordSuccess,
+  changePasswordFailure,
+  signOutSuccess,
+  signOutFailure
 
 }
