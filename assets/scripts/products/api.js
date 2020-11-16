@@ -30,7 +30,7 @@ const updateProduct = function (data) {
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    data: data.product
+    data: data
   })
 }
 

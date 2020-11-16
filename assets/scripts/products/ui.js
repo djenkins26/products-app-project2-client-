@@ -34,8 +34,7 @@ const indexProductFailure = function (error) {
   $('#message').text('All products failed, try again')
 }
 
-const updateProductSuccess = function (responseData) {
-
+const updateProductSuccess = function (data) {
   $('#update-product-message').html('You successfully made changes to this product')
 
   $('#product-display').html('Click "See all products in store" again to see changes')
@@ -56,7 +55,7 @@ const deleteProductSuccess = function (response) {
   $('#product-display').html('Click "See all products in store" again to see changes')
 
   $('#delete-product-message').addClass('success')
-  $('form').trigger('reset')
+  $('#delete-product').trigger('reset')
 }
 
 const deleteProductFailure = function (error) {

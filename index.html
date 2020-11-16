@@ -99,11 +99,11 @@
         <form id="update-product">
           <fieldset>
             <legend>Update a Product</legend>
-          <input require type="number" name="product[id]" id="update-product-id" placeholder="Product ID Here"/>
+          <input required type="text" name="product[id]" id="product-id-update" placeholder="Product ID Here"/>
 
-          <input name="product[name]" type="text" placeholder="Update name"/>
+          <input required type="text" name="product[name]" placeholder="Update name"/>
 
-          <input name="product[text]" type="text" placeholder="Update description"/>
+          <input required type="text" name="product[text]" placeholder="Update description"/>
 
           <button type="submit">Update</button>
         </fieldset>
@@ -115,12 +115,19 @@
         <form id="delete-product">
           <fieldset>
             <legend>Delete Product</legend>
-          <input require type="number" name="product[id]" placeholder="Product ID Here"/>
+          <input required type="text" name="product[id]" placeholder="Product ID Here"/>
           <button type="submit">Delete</button>
         </fieldset>
         </form>
         <div id="delete-product-message" class="user-feedback"></div>
       </section>
+
+<form id="display-products">
+      <div class="row">
+  <div class="col-sm-4">.col-sm-4</div>
+  <div class="col-sm-4">.col-sm-4</div>
+  <div class="col-sm-4">.col-sm-4</div>
+</div>
 
 
     </body>
