@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Products</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+
+    <body>
+      <h1>Share, Compare, & Decide!</h1>
+
+
+    <h4>
+      <ul id="Purpose">
+        <li>Sign up if you don't already have an account</li>
+        <li>Upload your products with you own reviews to help others</li>
+        <li>See other products and reviews before buying!</li>
+      </ul>
+    </h4>
+  <p id="message"></p>
+      <section>
+        <form id="sign-up-form">
+          <fieldset>
+            <legend>Sign up</legend>
+            <label for"sign-up-email">Email:</label>
+            <input id="sign-up-email" type="email" name="credentials[email]" placeholder="Email"/>
+
+            <label for"sign-up-password">Password:</label>
+            <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password"/>
+
+            <label for="sign-up-password-confirmation">Password Confirmation:</label>
+            <input id="sign-up-password-confirmation" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password"/>
+
+            <input type="submit" value="Sign up!"/>
+
+          </fieldset>
+        </form>
+      </section>
+
+
+
+      <section>
+        <form id="sign-in-form">
+          <fieldset>
+            <legend>Sign in</legend>
+            <label for="sign-in-email">Email:</label>
+            <input id="sign-in-email" type="email" name="credentials[email]" placeholder="Email"/>
+
+            <label for="sign-in-password">Password:</label>
+            <input id="sign-in-password" type="password" name="credentials[password]" placeholder="Password"/>
+            <input type="submit" value="Sign in!"/>
+          </fieldset>
+        </form>
+      </section>
+    <div
+      <section>
+        <form id="change-password-form">
+          <fieldset>
+            <legend>Change password</legend>
+            <input type="password" name="passwords[old]" placeholder="Old Password"/>
+            <input type="password" name="passwords[new]" placeholder="New Password"/>
+
+            <input type="submit" value="Change Password"/>
+          </fieldset>
+        </form>
+      </section>
+
+      <section>
+        <form id="sign-out-form">
+          <fieldset>
+            <label for="sign-out"></label>
+            <input type="submit" value="Sign-Out!"/>
+          </fieldset>
+        </form>
+      </section>
+  </div>
+
+
+      <section>
+        <form id="create-product">
+        <fieldset>
+          <legend>Create New Product</legend>
+
+          <input name="product[name]" type="text" placeholder="Product name"/>
+
+          <input name="product[text]" type="text" placeholder="Write a review"/>
+
+            <button type='submit'>Create</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <section>
+        <form id="index-product">
+        <legend>See all Products</legend>
+          <button id="index-product">Products</button>
+          <div id="product-display"></div>
+        </form>
+      </section>
+
+      <section>
+        <form id="update-product">
+          <fieldset>
+            <legend>Update a Product</legend>
+          <input required type="text" name="product[id]" id="product-id-update" placeholder="Product ID Here"/>
+
+          <input required type="text" name="product[name]" placeholder="Update name"/>
+
+          <input required type="text" name="product[text]" placeholder="Update review"/>
+
+          <button type="submit">Update</button>
+        </fieldset>
+        </form>
+        <div id="update-product-message" class="user-feedback"></div>
+      </section>
+
+      <section>
+        <form id="delete-product">
+          <fieldset>
+            <legend>Delete Product</legend>
+          <input required type="text" name="product[id]" placeholder="Product ID Here"/>
+          <button type="submit">Delete</button>
+        </fieldset>
+        </form>
+        <div id="delete-product-message" class="user-feedback"></div>
+      </section>
+    </body>
+</html>
