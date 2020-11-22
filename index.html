@@ -14,12 +14,17 @@
 
 
     <body>
-      <h1>Welcome!</h1>
+      <h1>Share, Compare, & Decide!</h1>
+
+
+    <h4>
+      <ul id="Purpose">
+        <li>Sign up if you don't already have an account</li>
+        <li>Upload your products with you own reviews to help others</li>
+        <li>See other products and reviews before buying!</li>
+      </ul>
+    </h4>
   <p id="message"></p>
-
-    <h2>To start uploading your products and posting reviews on other products please sign in!
-    Don't have an account? Please sign up!</h2>
-
       <section>
         <form id="sign-up-form">
           <fieldset>
@@ -39,6 +44,8 @@
         </form>
       </section>
 
+
+
       <section>
         <form id="sign-in-form">
           <fieldset>
@@ -52,7 +59,7 @@
           </fieldset>
         </form>
       </section>
-
+    <div
       <section>
         <form id="change-password-form">
           <fieldset>
@@ -73,6 +80,7 @@
           </fieldset>
         </form>
       </section>
+  </div>
 
 
       <section>
@@ -82,7 +90,7 @@
 
           <input name="product[name]" type="text" placeholder="Product name"/>
 
-          <input name="product[text]" type="text" placeholder="Product description"/>
+          <input name="product[text]" type="text" placeholder="Write a review"/>
 
             <button type='submit'>Create</button>
           </fieldset>
@@ -90,7 +98,9 @@
       </section>
 
       <section>
-          <button id="index-product">See all Products</button>
+        <form id="index-product">
+        <legend>See all Products</legend>
+          <button id="index-product">Products</button>
           <div id="product-display"></div>
         </form>
       </section>
@@ -103,7 +113,7 @@
 
           <input required type="text" name="product[name]" placeholder="Update name"/>
 
-          <input required type="text" name="product[text]" placeholder="Update description"/>
+          <input required type="text" name="product[text]" placeholder="Update review"/>
 
           <button type="submit">Update</button>
         </fieldset>
@@ -121,14 +131,5 @@
         </form>
         <div id="delete-product-message" class="user-feedback"></div>
       </section>
-
-<form id="display-products">
-      <div class="row">
-  <div class="col-sm-4">.col-sm-4</div>
-  <div class="col-sm-4">.col-sm-4</div>
-  <div class="col-sm-4">.col-sm-4</div>
-</div>
-
-
     </body>
 </html>

@@ -2,7 +2,6 @@ const store = require('./../store')
 
 
 const createProductSuccess = function (response) {
-  console.log('product added')
 
   $('#message').text('Your product is added')
 }
@@ -12,7 +11,6 @@ const createProductFailure = function (error) {
 }
 
 const indexProductSuccess = function (res) {
-  console.log('response is:', res)
 // res is an object with key of products and products is an array of product objects
   const products = res.products
 // empty the div with HTML empty string
@@ -41,6 +39,11 @@ const updateProductSuccess = function (data) {
 
   $('#update-product-message').addClass('success')
 
+  setTimeout(() => {
+    $('#update-product-message').html('')
+    $('#update-product-message').removeClass('success')
+  }, 5000)
+
   $('#update-product').trigger('reset')
 }
 
@@ -55,6 +58,11 @@ const deleteProductSuccess = function (response) {
   $('#product-display').html('Click "See all products in store" again to see changes')
 
   $('#delete-product-message').addClass('success')
+
+  setTimeout(() => {
+    $('#delete-product-message').html('')
+    $('#delete-product-message').removeClass('success')
+  }, 5000)
   $('#delete-product').trigger('reset')
 }
 

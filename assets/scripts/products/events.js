@@ -6,7 +6,6 @@ const store = require('./../store')
 
 const onCreateProduct = function (event) {
   event.preventDefault()
-  console.log('create')
 
   const form = event.target
   const data = getFormFields(form)

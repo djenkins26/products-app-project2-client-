@@ -24,8 +24,8 @@ const signInSuccess = function (response) {
   $('#index-product').show()
   $('#update-product').show()
   $('#delete-product').show()
-  $('h1').hide()
-  $('h2').hide()
+  $('h1').show()
+  $('h4').hide()
 }
 
 const signInFailure = function (error) {
@@ -43,6 +43,7 @@ const changePasswordFailure = function () {
 
 const signOutSuccess = function () {
   $('#message').text('You are now signed out')
+  $('#sign-out-form').trigger('reset')
   store.user = null
   $('#change-password-form').hide()
   $('#sign-out-form').hide()
@@ -54,7 +55,7 @@ const signOutSuccess = function () {
   $('#update-product').hide()
   $('#delete-product').hide()
   $('h1').show()
-  $('h2').show()
+  $('h4').show()
 }
 
 const signOutFailure = function () {
