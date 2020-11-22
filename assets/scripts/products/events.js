@@ -48,7 +48,6 @@ const onDeleteProduct = function (event) {
     .catch(ui.deleteProductFailure)
 }
 
-
 module.exports = {
   onCreateProduct,
   onIndexProduct,

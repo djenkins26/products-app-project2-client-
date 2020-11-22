@@ -1,6 +1,5 @@
 const store = require('./../store')
 
-
 const createProductSuccess = function (response) {
 
   $('#message').text('Your product is added')
@@ -13,7 +12,7 @@ const createProductFailure = function (error) {
 const indexProductSuccess = function (res) {
 // res is an object with key of products and products is an array of product objects
   const products = res.products
-// empty the div with HTML empty string
+  // empty the div with HTML empty string
   $('#product-display').html('')
 
   products.forEach(function (currentProduct) {
