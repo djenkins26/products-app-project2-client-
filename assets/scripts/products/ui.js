@@ -1,8 +1,19 @@
 const store = require('./../store')
 
 const createProductSuccess = function (response) {
+  $('create-product-message').html('Your product is added')
 
-  $('#message').text('Your product is added')
+  if (!($('#product-display').html() === '')) {
+    $('#product-display').html('Click "See all products in store" again to see your added product')
+  }
+  $('#create-product-message').addClass('success')
+  // $('#message').text('Your product is added')
+
+setTimeout(() => {
+    $('#create-product-message').html('')
+    $('#create-product-message').removeClass('success')
+}, 5000)
+$('#create-product').trigger('reset')
 }
 
 const createProductFailure = function (error) {
