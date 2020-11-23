@@ -21,8 +21,11 @@ As a user I want to create new products with details
 As a user I want to view all products
 As a user I want to update and delete products I have already created
 
-Link to express repo:
-Link to deployed sites:
+https://github.com/djenkins26/products-app
+
+https://whispering-atoll-59297.herokuapp.com
+
+https://djenkins26.github.io/products-app-project2-client-/
 
 This application allows a user to create a product with a name and text section where they can name their product and explain to others what their product is and what they think about it. I wanted to create an app where people can share their product and reviews for others can see before purchasing.
 
